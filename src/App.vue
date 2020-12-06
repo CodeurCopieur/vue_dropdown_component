@@ -37,7 +37,5 @@ ul {
 
 header {
   min-height: 100vh;
-  background-color: #000;
-  
 }
 </style>

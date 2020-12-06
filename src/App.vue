@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Navbar/>
+    <header>
+      <Navbar/>
+    </header>
   </div>
 </template>
 
@@ -21,5 +23,21 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+    text-transform: none;
+    outline: none;
+    text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  min-height: 100vh;
+  background-color: #000;
+  
 }
 </style>

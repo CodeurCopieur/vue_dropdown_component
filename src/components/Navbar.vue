@@ -7,6 +7,7 @@
       <li class="menu-item">
         <a href="#">About</a>
       </li>
+      <dropdown title="Services" :items="services" />
       <li class="menu-item">
         <a href="#">Contact</a>
       </li>
@@ -15,17 +16,38 @@
 </template>
 
 <script>
+
+import dropdown from './Dropdown.vue'
+
  export default {
-   name: 'Navbar',
+   name: 'navbar',
+   components: {
+     dropdown
+   },
    data: () => {
-     return {}
+     return {
+       Services: [ 
+         {
+          title: 'VUE JS',
+          link: '#'
+         },
+         {
+          title: 'SCSS',
+          link: '#'
+         },
+         {
+          title: 'JS',
+          link: '#'
+         }
+       ]
+     }
    }
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   nav {
-
+    border: 3px solid #fff;
     padding: 15px;
 
     .menu-list-item {

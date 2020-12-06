@@ -7,7 +7,7 @@
       <li class="menu-item">
         <a href="#">About</a>
       </li>
-      <dropdown title="Services" :items="services" />
+      <dropdown title="Services" :items="Services" />
       <li class="menu-item">
         <a href="#">Contact</a>
       </li>
@@ -28,15 +28,15 @@ import dropdown from './Dropdown.vue'
      return {
        Services: [ 
          {
-          title: 'VUE JS',
-          link: '#'
-         },
-         {
           title: 'SCSS',
           link: '#'
          },
          {
           title: 'JS',
+          link: '#'
+         },
+         {
+          title: 'VUE JS',
           link: '#'
          }
        ]
@@ -47,7 +47,7 @@ import dropdown from './Dropdown.vue'
 
 <style lang="scss">
   nav {
-    border: 3px solid #fff;
+    background-color: #000;
     padding: 15px;
 
     .menu-list-item {
@@ -58,6 +58,7 @@ import dropdown from './Dropdown.vue'
       .menu-item {
         
         position: relative;
+        color: #fff;
         padding: 10px 20px;
         border-bottom: 3px solid transparent;
         cursor: pointer;
@@ -65,18 +66,22 @@ import dropdown from './Dropdown.vue'
 
         &.active,
         &:hover{
-          background-color: #fff;
+          background-color: #444;
           border-bottom-color: #FF5858;
         }
 
-        &:hover a {
-          color: #000;
+        a {
+          color: inherit;
         }
 
-        a {
-          color: #fff;
-          background: transparent;
-          transition: all .5s ease-out;
+        
+        .sub-menu {
+          position: absolute;
+          background-color: #222;
+          top: calc(100% + 18px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: max-content;
         }
       }
     }

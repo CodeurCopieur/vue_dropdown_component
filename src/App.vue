@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <header>
-      <Navbar/>
+      <navbar/>
     </header>
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    navbar
   }
 }
 </script>
